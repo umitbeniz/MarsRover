@@ -13,18 +13,11 @@ namespace MarsRover.UI
             CoordinateEntity coordinate = new CoordinateEntity(1, 2);
             RoverEntity rover = new RoverEntity(plateau, coordinate, Direction.N);
 
-            //RoverOperation.CallRover(rover, "LMLMLMLMM");
-            //Console.WriteLine(RoverOperation.GetCurrentCoordinates(rover));
-
-            rover.CallRover("LMLMLMLMM");
+            RoverOperation.CallRover(rover, "LMLMLMLMM");
             Console.WriteLine(RoverOperation.GetCurrentCoordinates(rover));
 
-
-            rover.SetCoordinates(3, 3, Direction.E);
-            rover.CallRover("MMRMMRMRRM");
-
-            //rover.SetCoordinates(3, 3, Direction.E);
-            //RoverOperation.CallRover(rover, "MMRMMRMRRM");
+            RoverOperation.SetCoordinates(rover, 3, 3, Direction.E);
+            RoverOperation.CallRover(rover, "MMRMMRMRRM");
             Console.WriteLine(RoverOperation.GetCurrentCoordinates(rover));
 
             Console.ReadKey();
